@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { DOGS } from '../../assets/DOGS';
 import { ResultsPage } from './results';
+import { TruncateModule } from '@yellowspot/ng-truncate';
+
 
 @NgModule({
   declarations: [
@@ -9,6 +10,7 @@ import { ResultsPage } from './results';
   ],
   imports: [
     IonicPageModule.forChild(ResultsPage),
+    TruncateModule,
   ]
 })
 export class ResultsPageModule {}

@@ -14,6 +14,33 @@
 
 
 <ion-content padding>
-<h1>Parasiten Gefunden*</h1>
-<p>{{test.title}}</p>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let result of test.recommendation; let i=index" >
+      <h3 (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+        {{result.category}}
+        <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+      </h3>
+
+      <div *ngIf="isGroupShown(i) && result.desc.length <= limit">
+        {{result.desc}}
+      </div>
+
+      <div *ngIf="isGroupShown(i) && truncating && result.desc.length > limit">
+        {{result.desc | truncate : limit }}
+
+        <button ion-button (click)="truncating = false">
+          show more
+        </button>
+      </div>
+
+      <div *ngIf="isGroupShown(i) && !truncating && result.desc.length > limit">
+          {{result.desc}}
+  
+          <button ion-button (click)="truncating = true">
+            show less
+          </button>
+      </div>
+
+    </ion-item> 
+  </ion-list>
 </ion-content>

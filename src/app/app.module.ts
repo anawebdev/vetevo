@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ResultsPage } from '../pages/results/results';
+import { TruncateModule } from '@yellowspot/ng-truncate';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ResultsPage } from '../pages/results/results';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    TruncateModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

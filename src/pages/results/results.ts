@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DOGS } from '../../assets/DOGS';
+import { TruncateModule } from '@yellowspot/ng-truncate';
 
 @IonicPage()
 @Component({
@@ -10,21 +10,31 @@ import { DOGS } from '../../assets/DOGS';
 export class ResultsPage {
 
   test: any;
+  shownGroup = null;
+  limit: number = 300;
+  truncating = true;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams) {
       this.test = navParams.get('test');
-      // this.navParams.get('test').then((val)=>{
-      //   var test = JSON.parse(val);
-      //   console.log(test);
-      // })
+      // console.log(this.test.recommendation);
     }
-    
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResultsPage');
     
   }
+
+  toggleGroup(group) {
+        if (this.isGroupShown(group)) {
+            this.shownGroup = null;
+        } else {
+            this.shownGroup = group;
+        }
+    };
+    isGroupShown(group) {
+        return this.shownGroup === group;
+  };
 
 }
