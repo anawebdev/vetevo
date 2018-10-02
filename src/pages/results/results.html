@@ -1,9 +1,3 @@
-<!--
-  Generated template for the ResultsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -13,34 +7,117 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-list>
-    <ion-item text-wrap *ngFor="let result of test.recommendation; let i=index" >
-      <h3 (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+<ion-content>
+  <div class="test-wrapper">
+    <div class="worm-group-wrapper worm-group-1">
+      <img class="worm" src="assets/icon/worm.svg"/>
+      <img class="worm" src="assets/icon/worm.svg"/>
+      <img class="worm" src="assets/icon/worm.svg"/>
+    </div>
+    <div class="worm-group-wrapper worm-group-2">
+        <img class="worm" src="assets/icon/worm.svg"/>
+        <img class="worm" src="assets/icon/worm.svg"/>
+        <img class="worm" src="assets/icon/worm.svg"/>
+      </div>
+    <div class="test-icons-wrapper">
+        <img class="dog" src="assets/icon/dog.svg"/>
+        <p *ngIf="test.parasites == 0">
+          Keine parasiten gefunden
+        </p>
+        <p *ngIf="test.parasites != 0">
+            {{test.parasites}} Parasiten Gefunden
+        </p>
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+        <div class="dot dot-4"></div>
+    </div>
+      
+    
+  </div>
+
+  <div class="test-desc-wrapper" padding>
+    <h1>{{test.parasites}} Parasiten Gefunden*</h1>
+    <p>* {{test.description}}</p>
+  </div>
+
+  <ion-list padding>
+    <div text-wrap *ngFor="let result of test.recommendation; let i=index">
+      <ion-list-header (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
         {{result.category}}
-        <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+        <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-down' : 'arrow-forward'"></ion-icon>
+      </ion-list-header>
+
+      <h2 *ngIf="isGroupShown(i)">
+        {{result.title}}
+      </h2>
+
+      <h3 *ngIf="isGroupShown(i)">
+        {{result.subtitle}}
       </h3>
 
-      <div *ngIf="isGroupShown(i) && result.desc.length <= limit">
+      <p *ngIf="isGroupShown(i) && result.desc.length <= limit">
         {{result.desc}}
-      </div>
+      </p>
 
-      <div *ngIf="isGroupShown(i) && truncating && result.desc.length > limit">
+      <p *ngIf="isGroupShown(i) && truncating && result.desc.length > limit">
         {{result.desc | truncate : limit }}
 
-        <button ion-button (click)="truncating = false">
-          show more
+        <button class="button-expand" ion-button (click)="truncating = false">
+          Mehr
         </button>
-      </div>
+      </p>
 
-      <div *ngIf="isGroupShown(i) && !truncating && result.desc.length > limit">
-          {{result.desc}}
-  
-          <button ion-button (click)="truncating = true">
-            show less
-          </button>
-      </div>
+      <p *ngIf="isGroupShown(i) && !truncating && result.desc.length > limit">
+        {{result.desc}}
 
-    </ion-item> 
+        <button class="button-expand" ion-button (click)="truncating = true">
+          Weniger
+        </button>
+      </p>
+
+    </div> 
   </ion-list>
+
+  <div class="contact-wrapper" padding>
+    <div class="contact" padding>
+      <ion-row class="contact-info">
+        <ion-col col-12>
+            <h6>Sie haben noch Fragen rund um den Wurmtest?</h6>
+            <p>Wir sind fur Sie da - telefonisch, digital und vor Ort.</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+          <div class="contact-icon-wrapper">
+              
+              <button (click)="callNumber()">
+                  <ion-icon name="call" ></ion-icon>
+              </button>
+              <p>Anrufen</p>
+
+          </div>
+        </ion-col>
+
+        <ion-col>
+          <div class="contact-icon-wrapper">
+            <button (click)="openWebpage(url)">
+                <ion-icon name="wifi"></ion-icon>
+            </button>
+            <p>Website</p>
+          </div>
+        </ion-col>
+        
+        <ion-col>
+          <div class="contact-icon-wrapper">
+            <button (click)="sendEmail()">
+                <ion-icon name="mail"></ion-icon>
+            </button>
+            <p>Mail</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
 </ion-content>
