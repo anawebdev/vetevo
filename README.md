@@ -6,13 +6,13 @@
 
 ## Getting Started
 
-######Run in browser:
+Run in browser:
 
 ```
 ionic serve
 ```
 
-######Run in Android Studio:
+Run in Android Studio:
 
 ```
 ionic cordova run android
@@ -20,9 +20,9 @@ ionic cordova run android
 
 ### Prerequisites
 
-######Node
+Node
 
-######Ionic and Cordova
+Ionic and Cordova
 
 ```
 npm install -g ionic@3.7.0 cordova
