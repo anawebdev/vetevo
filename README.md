@@ -28,7 +28,7 @@ Ionic and Cordova
 npm install -g ionic@3.7.0 cordova
 ```
 
-[Truncate Module](https://www.npmjs.com/package/@yellowspot/ng-truncate)
+[Truncate Module](https://www.npmjs.com/package/@yellowspot/ng-truncate).
 
 ```
 $ npm install @yellowspot/ng-truncate --save
