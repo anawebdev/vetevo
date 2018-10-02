@@ -149,7 +149,7 @@ page-results {
 
     // TEST RESULTS SUMMARY
     .test-desc-wrapper {
-        padding-bottom: 0!important;
+        padding: 20px 20px 0 20px !important;
     }
 
     .test-desc-wrapper h1 {
@@ -194,6 +194,7 @@ page-results {
 
     .accordion-list {
         margin-bottom: 0;
+        padding: 20px 20px 0 20px !important;
     }
 
     .list-header-ios {
