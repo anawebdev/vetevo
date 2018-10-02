@@ -1,8 +1,8 @@
 # Test Results Viewer
 
-![alt text](https://i.imgur.com/EK1Efhs.png)
-![alt text](https://i.imgur.com/WJhEyQe.png)
-![alt text](https://i.imgur.com/F1W6jcg.png)
+![alt text](https://i.imgur.com/D3K2kRw.png)
+![alt text](https://i.imgur.com/MRnssPR.png)
+![alt text](https://i.imgur.com/FO9yduJ.png)
 
 ## Getting Started
 
