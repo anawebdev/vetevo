@@ -1,113 +1,146 @@
 page-home {
+
+    // GENERAL
     .home {
         background: color($colors, light-grey);        
     }
+
     .half-screen {
         width: 50%;
         display: inline-block;
     }
+
     .main-content {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: -100px;
         position: relative;
     }
+
+    .background-img {
+        display: none;
+    }
+
+    .card-content-md {
+        padding: 13px 20px;
+    }
+
+    //CARDS - GENERAL
     .card {
-        margin: 8px 6px;
-        border-radius: 10px;
         width: calc(100% - 12px);
+        margin: 8px 6px;
+        
         background: color($colors, light);
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-      }
-    .card--small {
-        text-align: center;
-        min-height: 160px;
+        border-radius: 10px;
     }
+
+    .card-content p {
+        font-family: "Roboto", sans-serif;
+        color: color($colors, medium-grey);
+    }
+
+    // BIG CARD
     .card--big {
         min-height: 190px;
     }
-    .heart--wrapper {
-        width: 62px;
-        height: 62px;
-        border: dotted color($colors, primary) 2px;
-        border-radius: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .heart {
-        width: 30px;
-        fill: color($colors, primary);
-        margin-top: 15px;
-    }
+
     .card-ios h1 {
         font-family: "Roboto", sans-serif;
-        font-weight: 900;
         line-height: 120%;
+        font-weight: 900;
         color: color($colors, dark-grey);
     }
-    .card-ios h2 {
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        color: color($colors, dark-grey);
-    }
+
     .card-header--big {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
     }
-    .card-content p {
+
+    .card-ios h2 {
         font-family: "Roboto", sans-serif;
-        color: color($colors, medium-grey);
+        line-height: 120%;
+        font-weight: 700;
+        color: color($colors, dark-grey);
     }
-    .worm {
-        width: 24px;
-        height: 24px;
-        transform: rotate(40deg);
-        margin-right: 5px;
-    }
+
     .card-header--extra {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
     }
+
     .card-header--extra h4 {
         color: color($colors, primary);
     }
+
     .card-header--big {
         padding: 32px 20px 20px 20px;
+    }
+
+    .worm {
+        width: 24px;
+        height: 24px;
+        transform: rotate(40deg);
+        margin-right: 5px;
+    }
+
+    // SMALL CARDS
+    .card--small {
+        min-height: 160px;
+
+        text-align: center;
+    }
+
+    .heart-wrapper {
+        display: block;
+        width: 62px;
+        height: 62px;
+        margin-left: auto;
+        margin-right: auto;
+
+        border: dotted color($colors, primary) 2px;
+        border-radius: 50%;       
+    }
+
+    .heart {
+        width: 30px;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+
+        fill: color($colors, primary);
+    }
+
+    .card--small .card-header-ios {
+        padding: 14px;
+    }
+
+    .card--small {
+        padding-top: 8px;
     } 
+
     .card--small h3 {
         text-transform: uppercase;
         font-family: "Roboto", sans-serif;
         color: color($colors, dark-grey);
         font-weight: 700;
     } 
+
     .card--small p {
         margin-top: 10px;
     }   
-    .card--small {
-        padding-top: 8px;
-    }   
-    .card--small .card-header-ios {
-        padding: 14px;
-    } 
-    .main-content {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .background-img {
-        display: none;
-    }
-    .card-content-md {
-        padding: 13px 20px;
-    }
+      
     @media (min-width:641px)  { 
         .half-screen {
             width: 33.33%;
         }
      }
+
     @media (min-width:961px)  { 
         .half-screen {
             width: 25%;
@@ -120,8 +153,8 @@ page-home {
         .background-img {
             display: block;
             position: absolute;
-            top: 0;
             height: 550px;
+            top: 0;
             left: 0;
             right: 0;
             background: url('https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg') center center no-repeat;
@@ -133,8 +166,5 @@ page-home {
         .top-img {
             display: none;
         }
-        // .main-content {
-        //     margin-top: 100px;
-        // }
     }
 }

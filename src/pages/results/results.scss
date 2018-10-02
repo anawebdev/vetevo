@@ -1,258 +1,337 @@
 page-results {
+
+    // GENERAL
+
+    .test-desc-wrapper,
+    .contact {
+        display: block;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // HEADER
     ion-navbar.toolbar {
         min-height: 80px;
       }
+
     ion-navbar ion-icon {
         color: color($colors, light);
     }
+
     .fixed-content,
     .scroll-content {
         margin-top: 80px;
     }
+
     .back-button-text {
         display: none;
     }
+
     .back-button {
         width: 50px;
     }
+
     .toolbar-title-ios {
         text-align: left;
     }
+
     .toolbar-ios ion-title {
         padding: 0 50px 1px;
     }
+
     .toolbar-title {
         text-transform: uppercase;
         font-weight: 400;
     }
-    ion-label {
-        color: color($colors, primary);
-        padding-left: 10px;
-    }
-    ion-list-header {
-        padding-left: 0 !important;
-    }
-    ion-icon {
-        color: color($colors, primary);
-    }
-    ion-list-header .item > ion-icon, 
-    ion-list-header .item-inner > ion-icon {
-        font-size: 14px;
-        padding-top: 7px;
-    }
-    .list-header-ios {
-        border-bottom: 0.55px solid color($colors, light-grey);
-    }
-    ion-list h2 {
-        text-transform: uppercase;
-        color: color($colors, dark-grey);
-        font-size: 24px;
-        padding-top: 25px;
-        padding-bottom: 10px;
-        font-weight: 700;
-    }
-    ion-label {
-        text-transform: uppercase;
-    }
-    ion-list h3 {
-        color: color($colors, dark-grey);
-        font-size: 18px;
-    }
-    ion-list p {
-        color: color($colors, dark-grey);
-        line-height: 150%;
-    }
-    .button-expand {
-        background-color: transparent;
-        height: auto;
-        border: none;
-        box-shadow: none;
-        color: color($colors, primary);
-        margin-top: -4px;
-        text-transform: uppercase;
-        font-size: 14px;
-    }
-    .button-md:hover:not(.disable-hover) {
-        background-color: transparent;
-    }
-    .list-header-ios:first-of-type {
-        border-top: 1px solid color($colors, light-grey);
-    }
-    .test-desc-wrapper {
-        padding-bottom: 0!important;
-    }
-    .test-desc-wrapper h1 {
-        text-align: center;
-        text-transform: uppercase;
-        color: color($colors, dark-grey);
-        font-weight: 700;
-    }
-    .test-desc-wrapper p {
-        text-align: center;
-        color: color($colors, medium-grey);
-    }
-    .contact-wrapper {
-        background-color: color($colors, primary);
-    }
-    .contact {
-        padding: 32px;
-    }
-    ion-col {
-        text-align: center;
-        color: #ffffff;
-    }
-    .contact-icon-wrapper {
-        width: 72px;
-        height: 72px;
-        border-radius: 50%;
-        background: color($colors, light);
-        margin: 0 auto;
-    }
-    .contact-icon-wrapper ion-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 50px;
-        margin-top: 11px;
-    }
-    ion-list {
-        padding-bottom: 0 !important;
-        margin-bottom: 0;
-    }
-    .list-ios {
-        margin-bottom: 0;
-    }
-    .contact-icon-wrapper p {
-        margin-top: 25px;
-        font-weight: 200;
-    }
-    .contact {
-        padding-bottom: 40px !important;
-    }
-    .contact-info p {
-        font-weight: 200;
-    }
-    .contact-info h6,
-    .contact-info p {
-        text-align: left;
-    }
-    .contact-info {
-        margin-bottom: 30px;
-    }
+
+    // DOG ICON GROUP
     .test-wrapper {
-        background-color: color($colors, primary);
-        text-align: center;
-        color: color($colors, light);
+        position: relative;
+        margin-bottom: 40px;
         padding-top: 35px;
         padding-bottom: 35px;
+
+        text-align: center;
+        color: color($colors, light);
+
+        background-color: color($colors, primary);
         border-bottom-left-radius: 60% 40%;
-        border-bottom-right-radius: 60% 40%;
-        margin-bottom: 40px;
-        position: relative;
+        border-bottom-right-radius: 60% 40%; 
     }
+
     .test-icons-wrapper {
+        display: block;
+        position: relative; 
         width: 182px;
         height: 182px;
-        border: dotted color($colors, light) 2px;
-        display: block;
         margin-left: auto;
         margin-right: auto;
-        border-radius: 50%;
-        position: relative;    
+
+        border: dotted color($colors, light) 2px;
+        border-radius: 50%;    
     }
-    .dot {
-        position: absolute;
-        width: 14px;
-        height: 14px;
-        display: block;
-        background: color($colors, light);
-        border-radius: 50%;
-        transform: translateY(-7px) translateX(-7px);
-    }
-    .dot-1 {
-        top: 0;
-        left: 50%;
-    }
-    .dot-2 {
-        top: 50%;
-        left: 100%;
-    }
-    .dot-3 {
-        top: 100%;
-        left: 50%;
-    }
-    .dot-4 {
-        left: 0;
-        top: 50%;
-    }
+
     .test-icons-wrapper p {
         max-width: 100px;
         margin-left: auto;
         margin-right: auto;
     }
+
+    .dot {
+        display: block;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        
+        border-radius: 50%;
+        background: color($colors, light);
+        transform: translateY(-7px) translateX(-7px);
+    }
+
+    .dot-1 {
+        top: 0;
+        left: 50%;
+    }
+
+    .dot-2 {
+        top: 50%;
+        left: 100%;
+    }
+
+    .dot-3 {
+        top: 100%;
+        left: 50%;
+    }
+
+    .dot-4 {
+        left: 0;
+        top: 50%;
+    }
+
     .dog {
         width: 72px;
         margin-top: 30px;
     }
+
     ion-header {
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     }
+
+    // WORM ICONS
     .worm {
+        display: block;
         width: 24px;
         height: 24px;
-        display: block;
-        -webkit-transform: rotate(40deg);
-        transform: rotate(40deg);
         margin-right: 5px;
+
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);  
     }
-    .worm:nth-child(2){
+
+    .worm:nth-child(2) {
         margin-left: 20px;
     }
+
     .worm-group-wrapper {
         position: absolute;
     }
+
     .worm-group-1 {
         top: 15%;
         left: 3%;
     }
+
     .worm-group-2 {
         right: 3%;
         bottom: 20%;
     }
-    .contact-icon-wrapper button {
-        background: transparent;
+
+    // TEST RESULTS SUMMARY
+    .test-desc-wrapper {
+        padding-bottom: 0!important;
     }
-    ion-list,
-    .list {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+
+    .test-desc-wrapper h1 {
+        color: color($colors, dark-grey);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
     }
-    .test-desc-wrapper,
-    .contact {
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+
+    .test-desc-wrapper p {
+        color: color($colors, medium-grey);
+        text-align: center;
     }
+    
+    // TEST RESULTS ACCORDION
     ion-list-header {
         margin-bottom: 0 !important;
     }
-    @media (min-width:641px)  { 
 
-     }
-    @media (min-width:961px)  { 
+    ion-label {
+        color: color($colors, primary);
+        padding-left: 10px;
+    }
 
-     }
+    ion-list-header {
+        padding-left: 0 !important;
+    }
+
+    ion-list-header:hover {
+        cursor: pointer;
+    }
+
+    ion-icon {
+        color: color($colors, primary);
+    }
+
+    ion-list-header .item > ion-icon, 
+    ion-list-header .item-inner > ion-icon {
+        font-size: 14px;
+        padding-top: 7px;
+    }
+
+    .accordion-list {
+        margin-bottom: 0;
+    }
+
+    .list-header-ios {
+        border-bottom: 0.55px solid color($colors, light-grey);
+        font-weight: 700;
+    }
+
+    ion-list h2 {
+        padding-top: 25px;
+        padding-bottom: 10px;
+
+        color: color($colors, dark-grey);
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    ion-label {
+        text-transform: uppercase;
+    }
+
+    ion-list h3 {
+        color: color($colors, dark-grey);
+        font-size: 18px;
+    }
+
+    ion-list p {
+        color: color($colors, dark-grey);
+        line-height: 150%;
+    }
+
+    .button-expand {
+        height: auto;
+        margin-top: -4px;
+
+        color: color($colors, primary);
+        text-transform: uppercase;
+        font-size: 14px;
+
+        background-color: transparent;
+        box-shadow: none;
+        border: none;        
+    }
+
+    .button-md:hover:not(.disable-hover) {
+        background-color: transparent;
+    }
+
+    .list-header-ios:first-of-type {
+        border-top: 1px solid color($colors, light-grey);
+    }
+
+    // CONTACT
+    .contact-wrapper {
+        background-color: color($colors, primary);
+    }
+
+    .contact {
+        padding: 32px;
+    }
+
+    ion-col {
+        color: color($colors, light);
+        text-align: center;
+    }
+
+    .contact-icon-wrapper {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto;
+
+        background: color($colors, light);
+        border-radius: 50%;
+    }
+
+    .contact-icon-wrapper ion-icon {
+        width: 50px;
+        height: 50px;
+        margin-top: 11px;
+
+        font-size: 50px;
+    }
+
+    ion-list {
+        padding-bottom: 0 !important;
+        margin-bottom: 0;
+    }
+
+    .list-ios {
+        margin-bottom: 0;
+    }
+
+    .contact-icon-wrapper p {
+        margin-top: 25px;
+
+        font-weight: 200;
+    }
+
+    .contact {
+        padding-bottom: 40px !important;
+    }
+
+    .contact-info p {
+        font-weight: 200;
+    }
+
+    .contact-info h6,
+    .contact-info p {
+        text-align: left;
+    }
+
+    .contact-info {
+        margin-bottom: 30px;
+    }
+
+    .contact-icon-wrapper button {
+        background: transparent;
+    }
+
+    ion-list,
+    .list {
+        display: block;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     @media (min-width:1025px) { 
         .test-wrapper {
             padding-top: 60px;
             padding-bottom: 60px;
             margin-bottom: 80px;
         }
+
         .test-desc-wrapper {
             margin-bottom: 60px;
         }
+
         .contact {
             margin-top: 40px;
             margin-bottom: 40px;

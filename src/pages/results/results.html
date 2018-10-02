@@ -1,53 +1,65 @@
+<!-- HEADER -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>Wurmtest Detail</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
+<!-- CONTENT -->
 <ion-content>
   <div class="test-wrapper">
+
+    <!-- WORM ICONS -->
     <div class="worm-group-wrapper worm-group-1">
       <img class="worm" src="assets/icon/worm.svg"/>
       <img class="worm" src="assets/icon/worm.svg"/>
       <img class="worm" src="assets/icon/worm.svg"/>
     </div>
+
     <div class="worm-group-wrapper worm-group-2">
-        <img class="worm" src="assets/icon/worm.svg"/>
-        <img class="worm" src="assets/icon/worm.svg"/>
-        <img class="worm" src="assets/icon/worm.svg"/>
-      </div>
+      <img class="worm" src="assets/icon/worm.svg"/>
+      <img class="worm" src="assets/icon/worm.svg"/>
+      <img class="worm" src="assets/icon/worm.svg"/>
+    </div>
+
+    <!-- DOG ICON-GROUP -->
     <div class="test-icons-wrapper">
         <img class="dog" src="assets/icon/dog.svg"/>
+
         <p *ngIf="test.parasites == 0">
           Keine parasiten gefunden
         </p>
+
         <p *ngIf="test.parasites != 0">
             {{test.parasites}} Parasiten Gefunden
         </p>
+
         <div class="dot dot-1"></div>
         <div class="dot dot-2"></div>
         <div class="dot dot-3"></div>
         <div class="dot dot-4"></div>
     </div>
       
-    
   </div>
 
+  <!-- TEST RESULTS SUMMARY-->
   <div class="test-desc-wrapper" padding>
     <h1>{{test.parasites}} Parasiten Gefunden*</h1>
     <p>* {{test.description}}</p>
   </div>
 
-  <ion-list padding>
+
+  <!-- TEST RESULTS ACCORDION -->
+  <ion-list class="accordion-list" padding>
     <div text-wrap *ngFor="let result of test.recommendation; let i=index">
+
+      <!-- ACCORDION HEADER -->
       <ion-list-header (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
         {{result.category}}
         <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-down' : 'arrow-forward'"></ion-icon>
       </ion-list-header>
 
+      <!-- ACCORDION INFO  -->
       <h2 *ngIf="isGroupShown(i)">
         {{result.title}}
       </h2>
@@ -79,26 +91,31 @@
     </div> 
   </ion-list>
 
+  <!-- CONTACT -->
   <div class="contact-wrapper" padding>
     <div class="contact" padding>
+
+      <!-- CONTACT TEXT -->
       <ion-row class="contact-info">
         <ion-col col-12>
             <h6>Sie haben noch Fragen rund um den Wurmtest?</h6>
             <p>Wir sind fur Sie da - telefonisch, digital und vor Ort.</p>
         </ion-col>
       </ion-row>
+
       <ion-row>
+
+        <!-- CALL BUTTON -->
         <ion-col col-4>
           <div class="contact-icon-wrapper">
-              
               <button (click)="callNumber()">
                   <ion-icon name="call" ></ion-icon>
               </button>
               <p>Anrufen</p>
-
           </div>
         </ion-col>
 
+        <!-- OPEN WEBPAGE BUTTON -->
         <ion-col>
           <div class="contact-icon-wrapper">
             <button (click)="openWebpage(url)">
@@ -108,6 +125,7 @@
           </div>
         </ion-col>
         
+        <!-- OPEN EMAIL BUTTON -->
         <ion-col>
           <div class="contact-icon-wrapper">
             <button (click)="sendEmail()">
@@ -116,6 +134,7 @@
             <p>Mail</p>
           </div>
         </ion-col>
+
       </ion-row>
     </div>
   </div>

@@ -34,6 +34,7 @@ export class ResultsPage {
     
   }
 
+  // TEST RESULTS ACCORDION
   toggleGroup(group) {
         if (this.isGroupShown(group)) {
             this.shownGroup = null;
@@ -42,21 +43,23 @@ export class ResultsPage {
         }
     };
 
-
   isGroupShown(group) {
       return this.shownGroup === group;
   };
 
+  // CALL
   callNumber(){
     this.call.callNumber("40747754797", true)
       .then(res => console.log('Launched dialer!', res))
       .catch(err => console.log('Error launching dialer', err));
   }
 
+  // OPEN WEBPAGE
   openWebpage(url: string) {
     const browser = this.inAppBrowser.create(url, '_target');;
   }
 
+  // SEND EMAIL
   sendEmail(){
 
     let email = {
@@ -69,13 +72,6 @@ export class ResultsPage {
     };
 
     this.emailComposer.open(email);
-    // this.emailComposer.isAvailable().then((available: boolean) =>{
-    //   if(available) {
-    //     this.emailComposer.open(email);
-    //   }
-    //  });
   }
   
-  
-
 }
