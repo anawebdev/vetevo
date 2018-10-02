@@ -28,13 +28,13 @@ ionic cordova run android
 npm install -g ionic@3.7.0 cordova
 ```
 
-######[Truncate Module](https://www.npmjs.com/package/@yellowspot/ng-truncate)
+[Truncate Module](https://www.npmjs.com/package/@yellowspot/ng-truncate)
 
 ```
 $ npm install @yellowspot/ng-truncate --save
 ```
 
-######[Call Number](https://ionicframework.com/docs/native/call-number/)
+[Call Number](https://ionicframework.com/docs/native/call-number/)
 ```
 $ ionic cordova plugin add call-number
 ```
@@ -42,7 +42,7 @@ $ ionic cordova plugin add call-number
 $ npm install --save @ionic-native/call-number
 ```
 
-######[In App Browser](https://ionicframework.com/docs/native/in-app-browser/)
+[In App Browser](https://ionicframework.com/docs/native/in-app-browser/)
 ```
 $ ionic cordova plugin add cordova-plugin-inappbrowser
 ```
@@ -50,7 +50,7 @@ $ ionic cordova plugin add cordova-plugin-inappbrowser
 $ npm install --save @ionic-native/in-app-browser
 ```
 
-######[Email Composer](https://ionicframework.com/docs/native/email-composer/)
+[Email Composer](https://ionicframework.com/docs/native/email-composer/)
 ```
 $ ionic cordova plugin add cordova-plugin-email-composer
 ```
